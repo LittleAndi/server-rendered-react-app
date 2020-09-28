@@ -24,7 +24,7 @@ app.use(express.static("dist"));
 
 app.get('/', async (_req, res) => {
     const index = readFileSync(`public/index.html`, `utf8`);
-    const rendered = renderToString(<App/>);
+    const rendered = renderToString(<App {... data}/>);
     res.send(index.replace("{{rendered}}", rendered));
 })
 
