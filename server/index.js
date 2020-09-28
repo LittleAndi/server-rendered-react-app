@@ -28,6 +28,10 @@ app.get('/', async (_req, res) => {
     res.send(index.replace("{{rendered}}", rendered));
 })
 
+app.get('/data', async (_req, res) => {
+    res.json(data);
+})
+
 app.listen(7777);
 
 console.info('Server is listening.');
