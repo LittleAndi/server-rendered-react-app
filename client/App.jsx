@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const App = ({ questions, answers }) => (
+export const App = ({ questions, answers, handleModifyAnswerVotes }) => (
     <div>
         <h1>Questions and answers</h1>
 
-        {questions.map(({questionId, content}) =>(
+        {questions.map(({questionId, content }) =>(
             <div key={questionId}>
                 <h3>{content}</h3>
                 <div>
@@ -12,6 +12,8 @@ export const App = ({ questions, answers }) => (
                         ({ content, upvotes, answerId }) => (
                             <div key={answerId}>
                                 <span>{content} - {upvotes}</span>
+                                <button onClick={()=>handleModifyAnswerVotes(answerId, 1)}> + </button>
+                                <button onClick={()=>handleModifyAnswerVotes(answerId, -1)}> - </button>
                             </div>
                         )
                     )}
