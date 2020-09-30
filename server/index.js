@@ -3,7 +3,7 @@ import express from 'express';
 import { readFileSync } from 'fs';
 import { renderToString } from 'react-dom/server';
 
-import { App } from '../client/App';
+import { App } from '../client/app';
 
 const data = {
     questions: [{
