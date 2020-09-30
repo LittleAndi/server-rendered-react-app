@@ -1,2 +1,2 @@
 # server-rendered-react-app
-Playing with Server Side Rendering
+Watching the Pluralsight course [Server Rendering React Components](https://app.pluralsight.com/library/courses/server-rendering-react-components) and created this repo to code along.
